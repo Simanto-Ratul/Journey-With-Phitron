@@ -4,18 +4,21 @@ int main()
     int n;
     scanf("%d", &n);
     int arr[n];
+    int oddCount = 0;
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &arr[i]);
-    }
-    int max = arr[0];
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] > max)
+        if (arr[i] % 2 != 0)
         {
-            max = arr[i];
+            oddCount = 1;
         }
     }
-    printf("%d", max);
+    if (oddCount)
+    {
+        for (int i = n - 1; i >= 0; i++)
+        {
+            printf("%d ", arr[i]);
+        }
+    }
     return 0;
 }
