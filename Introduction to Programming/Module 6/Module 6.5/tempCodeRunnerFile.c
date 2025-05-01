@@ -1,15 +1,14 @@
 #include <stdio.h>
 int main()
 {
-    char ch;
-    scanf("%c", &ch);
-    if (ch == 'z')
+    int n;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
     {
-        printf("a");
-    }
-    if (ch >= 'a' && ch < 'z')
-    {
-        printf("%c", ch + 1);
+        if (n % i == 0)
+        {
+            printf("%d\n", i);
+        }
     }
     return 0;
 }
